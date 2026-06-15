@@ -1,0 +1,107 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Servicios | Everest Global 360{% endblock %}
+
+{% block content %}
+
+<!-- ============================================================
+     HERO SERVICIOS
+     ============================================================ -->
+<section class="page-hero">
+    <div class="container">
+        <h1>Nuestros Servicios</h1>
+        <p>Soluciones integrales en comercio exterior diseñadas para impulsar tu negocio.</p>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     GRID DE SERVICIOS
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="servicios-grid">
+
+            <!-- Servicio 1: Agenciamiento Aduanal -->
+            <div class="servicio-card fade-in-up">
+                <div class="servicio-icon">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <h3>Agenciamiento Aduanal</h3>
+                <p>
+                    Gestionamos todos los trámites aduanales necesarios para la importación y exportación 
+                    de mercancías. Nuestro equipo se encarga de la clasificación arancelaria, 
+                    declaraciones de aduana, permisos y licencias, garantizando el cumplimiento 
+                    normativo y la agilidad en cada operación.
+                </p>
+            </div>
+
+            <!-- Servicio 2: Asesoría Arancelaria -->
+            <div class="servicio-card fade-in-up">
+                <div class="servicio-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3>Asesoría Arancelaria</h3>
+                <p>
+                    Brindamos asesoramiento especializado en materia arancelaria para optimizar 
+                    los costos de tus operaciones. Analizamos las partidas arancelarias aplicables, 
+                    beneficios fiscales disponibles y acuerdos comerciales vigentes que puedan 
+                    favorecer tu negocio.
+                </p>
+            </div>
+
+            <!-- Servicio 3: Logística y Transporte -->
+            <div class="servicio-card fade-in-up">
+                <div class="servicio-icon">
+                    <i class="fas fa-truck-fast"></i>
+                </div>
+                <h3>Logística y Transporte</h3>
+                <p>
+                    Coordinamos la cadena logística completa: transporte terrestre, marítimo y aéreo, 
+                    almacenamiento, consolidación y desconsolidación de carga. Nos aseguramos de que 
+                    tu mercancía llegue a destino en óptimas condiciones y dentro de los plazos 
+                    establecidos.
+                </p>
+            </div>
+
+            <!-- Servicio 4: Regímenes Especiales -->
+            <div class="servicio-card fade-in-up">
+                <div class="servicio-icon">
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <h3>Regímenes Especiales</h3>
+                <p>
+                    Asesoramos y gestionamos operaciones bajo regímenes aduaneros especiales: 
+                    admisión temporal, depósito aduanero, tránsito aduanero, zonas francas y 
+                    reimportación. Aprovecha los beneficios que estos regímenes ofrecen para 
+                    maximizar la rentabilidad de tu operación.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     CTA FINAL
+     ============================================================ -->
+<section class="section section-dark">
+    <div class="container">
+        <div class="bienvenida-content fade-in-up">
+            <h2 style="color: #ffffff;">¿Necesitas una <span class="accent">solución personalizada</span>?</h2>
+            <p style="color: rgba(255,255,255,0.7);">
+                Contáctanos y nuestro equipo de expertos diseñará una estrategia 
+                a la medida de tus necesidades comerciales.
+            </p>
+            <div class="btn-group">
+                <a href="{% url 'core:contacto' %}" class="btn btn-primary btn-lg">
+                    <i class="fab fa-instagram"></i> Escríbenos
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

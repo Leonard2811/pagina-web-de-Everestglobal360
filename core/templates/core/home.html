@@ -1,0 +1,167 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Everest Global 360 | Inicio{% endblock %}
+
+{% block content %}
+
+<!-- ============================================================
+     HERO CARRUSEL
+     ============================================================ -->
+<section class="hero-carousel" id="heroCarousel">
+    <div class="carousel-slide active">
+        <img src="{% static 'images/puerto 1.jpg' %}" alt="Puerto - Operaciones logísticas">
+        <div class="carousel-overlay">
+            <div class="carousel-content">
+                <h1>Soluciones Logísticas Integrales</h1>
+                <p>Conectamos tu negocio con el mundo a través de operaciones logísticas eficientes y seguras.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel-slide">
+        <img src="{% static 'images/puerto 2.jpg' %}" alt="Puerto - Comercio exterior">
+        <div class="carousel-overlay">
+            <div class="carousel-content">
+                <h1>Expertos en Transporte Internacional</h1>
+                <p>Más de dos décadas de experiencia en logística de transporte internacional.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="carousel-slide">
+        <img src="{% static 'images/puerto 4.jpg' %}" alt="Puerto - Carga y descarga">
+        <div class="carousel-overlay">
+            <div class="carousel-content">
+                <h1>Compromiso con la Excelencia</h1>
+                <p>Cada operación es una oportunidad para demostrar nuestro profesionalismo.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flechas -->
+    <button class="carousel-arrow prev" id="carouselPrev" aria-label="Anterior">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="carousel-arrow next" id="carouselNext" aria-label="Siguiente">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <!-- Indicadores -->
+    <div class="carousel-indicators" id="carouselIndicators">
+        <button class="active" aria-label="Diapositiva 1"></button>
+        <button aria-label="Diapositiva 2"></button>
+        <button aria-label="Diapositiva 3"></button>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     BIENVENIDA
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="bienvenida-content fade-in-up">
+            <h2>Bienvenidos a <span class="accent">Everest Global 360</span></h2>
+            <p>
+                Somos una empresa venezolana especializada en logística de transporte 
+                internacional. Nuestro compromiso es facilitar tus operaciones de 
+                comercio exterior con transparencia, eficiencia y el respaldo de un 
+                equipo profesional altamente capacitado.
+            </p>
+            <div class="btn-group">
+                <a href="{% url 'core:servicios' %}" class="btn btn-primary">
+                    <i class="fas fa-briefcase"></i> Nuestros Servicios
+                </a>
+                <a href="{% url 'core:contacto' %}" class="btn btn-outline">
+                    <i class="fas fa-envelope"></i> Contáctanos
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     NUESTRO PROCESO
+     ============================================================ -->
+<section class="section section-alianza">
+    <div class="container">
+        <div class="alianza-header fade-in-up">
+            <div class="section-title">
+                <h2>Nuestro Proceso</h2>
+                <p>Ofrecemos una solución integral de logística y transporte internacional para tu negocio.</p>
+            </div>
+        </div>
+
+        <div class="alianza-pasos">
+            <div class="paso-card fade-in-up">
+                <div class="paso-number">1</div>
+                <h3>Consulta Inicial</h3>
+                <p>Analizamos tu operación comercial y diseñamos una estrategia logística personalizada según tus necesidades.</p>
+            </div>
+
+            <div class="paso-card fade-in-up">
+                <div class="paso-number">2</div>
+                <h3>Gestión Integral</h3>
+                <p>Nos encargamos de toda la documentación y coordinación logística de principio a fin.</p>
+            </div>
+
+            <div class="paso-card fade-in-up">
+                <div class="paso-number">3</div>
+                <h3>Entrega Exitosa</h3>
+                <p>Tu mercancía llega a destino con total seguridad, cumplimiento normativo y en los tiempos acordados.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     VALORES
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="section-title fade-in-up">
+            <h2>Nuestros Valores</h2>
+            <p>Los pilares que guían cada una de nuestras operaciones.</p>
+        </div>
+
+        <div class="valores-grid">
+            <div class="valor-card fade-in-up">
+                <div class="valor-icon">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+                <h3>Seguridad</h3>
+                <p>Protegemos tu mercancía y tu inversión con los más altos estándares de seguridad en cada operación.</p>
+            </div>
+
+            <div class="valor-card fade-in-up">
+                <div class="valor-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Eficiencia</h3>
+                <p>Optimizamos tiempos y procesos para que tus operaciones se realicen de forma ágil y sin contratiempos.</p>
+            </div>
+
+            <div class="valor-card fade-in-up">
+                <div class="valor-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Transparencia</h3>
+                <p>Comunicación clara y honesta en cada etapa del proceso. Sin sorpresas, sin costos ocultos.</p>
+            </div>
+
+            <div class="valor-card fade-in-up">
+                <div class="valor-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Soporte</h3>
+                <p>Acompañamiento continuo y atención personalizada para resolver cualquier consulta o eventualidad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+

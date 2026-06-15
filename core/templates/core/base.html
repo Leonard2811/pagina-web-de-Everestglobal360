@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Everest Global 360 - Empresa especializada en logística de transporte internacional en Venezuela. Tu aliado estratégico en comercio exterior.">
+    <title>{% block title %}Everest Global 360{% endblock %}</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=2">
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+    <!-- Overlay para menú móvil -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- ============================================================
+         HEADER
+         ============================================================ -->
+    <header class="header" id="mainHeader">
+        <div class="container">
+            <a href="{% url 'core:home' %}" class="logo">
+                <img src="{% static 'images/logo de empresa.PNG' %}" alt="Everest Global 360 Logo">
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="{% url 'core:home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Inicio</a>
+                <a href="{% url 'core:servicios' %}" class="{% if request.resolver_match.url_name == 'servicios' %}active{% endif %}">Servicios</a>
+                <a href="{% url 'core:ubicacion' %}" class="{% if request.resolver_match.url_name == 'ubicacion' %}active{% endif %}">Ubicación</a>
+                <a href="{% url 'core:contacto' %}" class="{% if request.resolver_match.url_name == 'contacto' %}active{% endif %}">Contacto</a>
+            </nav>
+
+            <button class="hamburger" id="hamburger" aria-label="Menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         CONTENIDO PRINCIPAL
+         ============================================================ -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Everest Global 360</h4>
+                    <p>Tu aliado estratégico en logística de transporte internacional en Venezuela.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/everestglobal360?igsh=MWtxNXQyenliOHVkbg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <nav class="footer-nav">
+                        <a href="{% url 'core:home' %}">Inicio</a>
+                        <a href="{% url 'core:servicios' %}">Servicios</a>
+                        <a href="{% url 'core:ubicacion' %}">Ubicación</a>
+                        <a href="{% url 'core:contacto' %}">Contacto</a>
+                    </nav>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Ubicación</h4>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>&nbsp;
+                        Edificio Luisa María, Oficina 3A,<br>
+                        Guanta, Anzoátegui, Venezuela
+                    </p>
+                    <br>
+                    <p>
+                        <i class="fab fa-instagram"></i>&nbsp;
+                        <a href="https://www.instagram.com/everestglobal360?igsh=MWtxNXQyenliOHVkbg==" target="_blank" rel="noopener noreferrer">@everestglobal360</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; {% now "Y" %} Everest Global 360. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         JAVASCRIPT
+         ============================================================ -->
+    <script src="{% static 'js/main.js' %}?v=2"></script>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

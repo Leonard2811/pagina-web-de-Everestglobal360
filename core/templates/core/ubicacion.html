@@ -1,0 +1,88 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Ubicación | Everest Global 360{% endblock %}
+
+{% block content %}
+
+<!-- ============================================================
+     HERO UBICACIÓN
+     ============================================================ -->
+<section class="page-hero">
+    <div class="container">
+        <h1>Nuestra Ubicación</h1>
+        <p>Visítanos en nuestras oficinas en Guanta, estado Anzoátegui.</p>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     INFORMACIÓN Y MAPA
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="ubicacion-content">
+
+            <!-- Info -->
+            <div class="ubicacion-info fade-in-up">
+                <div class="ubicacion-detail">
+                    <div class="ubicacion-detail-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div>
+                        <h3>Oficina Principal</h3>
+                        <p>Edificio Luisa María, Oficina 3A</p>
+                    </div>
+                </div>
+
+                <div class="ubicacion-detail">
+                    <div class="ubicacion-detail-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Ciudad</h3>
+                        <p>Guanta, estado Anzoátegui, Venezuela</p>
+                    </div>
+                </div>
+
+                <div class="ubicacion-detail">
+                    <div class="ubicacion-detail-icon">
+                        <i class="fas fa-anchor"></i>
+                    </div>
+                    <div>
+                        <h3>Zona Portuaria</h3>
+                        <p>Ubicados estratégicamente cerca del Puerto de Guanta, principal puerto del oriente venezolano.</p>
+                    </div>
+                </div>
+
+                <div class="ubicacion-detail">
+                    <div class="ubicacion-detail-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div>
+                        <h3>Redes Sociales</h3>
+                        <p>
+                            <a href="https://www.instagram.com/everestglobal360?igsh=MWtxNXQyenliOHVkbg==" target="_blank" rel="noopener noreferrer" style="color: var(--rosa); font-weight: 600;">
+                                @everestglobal360
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mapa -->
+            <div class="mapa-container fade-in-up">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15692.847!2d-64.5939!3d10.2358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2d7e5b5b5b5b5b%3A0x5b5b5b5b5b5b5b5b!2sGuanta%2C%20Anzo%C3%A1tegui%2C%20Venezuela!5e0!3m2!1ses!2sve!4v1700000000000!5m2!1ses!2sve"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación de Everest Global 360 en Guanta, Anzoátegui">
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
