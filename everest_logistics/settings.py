@@ -14,6 +14,10 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 import mimetypes
+import dj_database_url
+import pymysql
+
+pymysql.install_as_MySQLdb()
 
 mimetypes.add_type("text/css", ".css", True)
 mimetypes.add_type("application/javascript", ".js", True)
@@ -32,9 +36,9 @@ load_dotenv(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-qy@u5f8p(z1n4_^&3%@3p4h*k#e)$19wfqp49mk**whblb_ek&')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [host.strip() for host in os.environ.get('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',') if host.strip()]
 
 
 # Application definition
@@ -91,6 +95,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# Si existe la variable DATABASE_URL, sobreescribir la base de datos (Producción / MySQL)
+if os.environ.get('DATABASE_URL'):
+    DATABASES['default'] = dj_database_url.parse(os.environ.get('DATABASE_URL'))
 
 
 # Password validation
